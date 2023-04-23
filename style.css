@@ -53,6 +53,147 @@ body {
     animation: gradient 15s ease infinite;
   }
   
+  .container {
+    margin-top: 0px; /* change this value to adjust the distance */
+  }
+  
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.container:hover {
+    width: 340px;
+    height: 440px;
+    border-radius: 50px;
+}
+
+.img-container {
+    width: 170px;
+    height: 170px;
+    min-height: 170px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 40px 5px rgba(0, 0, 0, 0.2);
+}
+
+.img-container img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.img-container:hover img {
+    transition: transform 2s cubic-bezier(0.42, 0, 0.58, 1);
+    transform: rotate(360deg);
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+
+
+.full-name {
+    font-size: 1.4em;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-top: 40px;
+    margin-bottom: 16px;
+}
+
+.role,
+.description {
+    font-size: 1em;
+    letter-spacing: 0.5px;
+    line-height: 20px;
+    text-align: center;
+}
+
+.role {
+    text-transform: uppercase;
+    padding-bottom: 8px;
+    margin-bottom: 24px;
+    border-bottom: 2px solid #ffbe44;
+}
+
+.social-container {
+    position: absolute;
+    top: 40px;
+    left: -40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.social-container button {
+    border: none;
+    outline: none;
+    color: #eee;
+    background: none;
+    width: 20px;
+    height: 40px;
+    font-size: 1.7em;
+    margin-bottom: 16px;
+    cursor: pointer;
+    transition: transform 0.4s;
+}
+
+
+.container:hover .social-container button {
+    transform: translateX(60px);
+    transition-delay: 0.3s;
+}
+
+.social-container button:hover {
+    transform: scale(1.2);
+  }
+  
+.container:hover .social-container button:nth-child(2) {
+    transition-delay: 0.5s;
+}
+
+.container:hover .social-container button:nth-child(3) {
+    transition-delay: 0.7s;
+}
+
+
+
+
+
+
+
+.container {
+    position: relative;
+    width: 220px;
+    height: 220px;
+    padding: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 0 60px 5px rgba(0, 0, 0, 0.15), 0 20px 40px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    transition: width 0.4s, height 0.4s, border-radius 0.4s;
+    background-image: linear-gradient(90deg, #511852, #800da3, #ae67ca, #050113);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+  
 
 
 @keyframes gradient {
